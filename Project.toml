@@ -1,0 +1,10 @@
+name = "Plotline"
+uuid = "1c2172fb-9280-4eae-bcc2-4d15666f2082"
+authors = ["Sean Voisen <sean@voisen.org>"]
+version = "0.1.0"
+
+[deps]
+Luxor = "ae8d54c2-7ccd-5906-9d76-62fc9837b5bc"
+
+[compat]
+Luxor = "4.2.0"
