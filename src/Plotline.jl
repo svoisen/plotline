@@ -1,7 +1,8 @@
 module Plotline
 
 include("hatch.jl")
+include("offset.jl")
 
-export hatchfill
+export hatchfill, offset
 
 end

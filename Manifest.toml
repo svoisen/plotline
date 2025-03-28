@@ -2,7 +2,7 @@
 
 julia_version = "1.11.4"
 manifest_format = "2.0"
-project_hash = "3aaa7a4a99d0195eb08deb83d928b3a04a1597ee"
+project_hash = "f611a2510d0ff9300aef3b9029234d40c1ca8e40"
 
 [[deps.ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"
@@ -33,6 +33,18 @@ deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "Fontconfig_jl
 git-tree-sha1 = "2ac646d71d0d24b44f3f8c84da8c9f4d70fb67df"
 uuid = "83423d85-b0ee-5818-9007-b63ccbeb887a"
 version = "1.18.4+0"
+
+[[deps.Clipper]]
+deps = ["Clipper_jll"]
+git-tree-sha1 = "0d26a8f45fb663e409ada1c6f07ebbbb7dfa7a03"
+uuid = "c8f6d549-b3ab-5508-a0d1-48fe138e8cc1"
+version = "0.6.3"
+
+[[deps.Clipper_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "Pkg"]
+git-tree-sha1 = "081e4372679b9e88614bd54edf64d46b9ae81bad"
+uuid = "1721f0f4-5627-55cb-8b31-c466f04189fe"
+version = "6.4.3+0"
 
 [[deps.ColorTypes]]
 deps = ["FixedPointNumbers", "Random"]
