@@ -1,7 +1,7 @@
 name = "Plotline"
 uuid = "1c2172fb-9280-4eae-bcc2-4d15666f2082"
 authors = ["Sean Voisen <sean@voisen.org>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 Clipper = "c8f6d549-b3ab-5508-a0d1-48fe138e8cc1"
