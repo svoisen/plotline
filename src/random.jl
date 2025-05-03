@@ -1,7 +1,16 @@
 import Luxor as L
 
 """
-    pointcloud(n::Int)
+    randombetween(a::Float64, b::Float64)
+
+Generate a random number between `a` and `b`.
+"""
+function randombetween(a::Float64, b::Float64)
+    return a + rand() * (b - a)
+end
+
+"""
+    pointcloud(n::Int, minx::Float64=0., miny::Float64=0., maxx::Float64=400., maxy::Float64=400.)
 
 Generate a point cloud of `n` points in a given rectangle.
 """
