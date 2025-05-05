@@ -1,7 +1,7 @@
 name = "Plotline"
 uuid = "1c2172fb-9280-4eae-bcc2-4d15666f2082"
 authors = ["Sean Voisen <sean@voisen.org>"]
-version = "0.1.6"
+version = "0.1.7"
 
 [deps]
 CatmullRom = "5b5b35a2-003c-5b99-bc04-a964994dd816"
