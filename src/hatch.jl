@@ -37,9 +37,18 @@ end
     hatch(polygon::Vector{L.Point}, angle::Real, pitch::Real)
 
 Fill a polygon with hatch lines at a given angle and pitch.
+arguments:
+- `polygon`: A vector of Luxor points defining the polygon to be hatched.
+- `angle`: The angle of the hatch lines in degrees.
+- `pitch`: The distance between hatch lines.
+- `startoffset`: Optional offset for the starting position of the hatch lines.
 """
-function hatch(polygon::Vector{L.Point}, angle::Real, pitch::Real)
+function hatch(polygon::Vector{L.Point}, angle::Real, pitch::Real, startoffset::Real = 0.0)
     start_position, diagonal, perp_x, perp_y, num_lines, line_direction = prepare_hatch(polygon, angle, pitch)
+
+    # Apply the startoffset parameter to adjust the starting position
+    # This shifts the start position along the perpendicular direction
+    start_position += L.Point(startoffset * perp_x, startoffset * perp_y)
 
     # Basic hatching can rely on Luxor's built-in clipping functionality
     L.gsave()
@@ -60,6 +69,11 @@ function hatch(polygon::Vector{L.Point}, angle::Real, pitch::Real)
     L.grestore()
 end
 
+"""
+    sketchyhatch(polygon::Vector{L.Point}, angle::Real, pitch::Real, slop::Real = 0.5mm)
+
+Fill a polygon with sketchy (hand drawn) hatch lines at a given angle and pitch.
+"""
 function sketchyhatch(polygon::Vector{L.Point}, angle::Real, pitch::Real, slop::Real = 0.5mm)
     start_position, diagonal, perp_x, perp_y, num_lines, line_direction = prepare_hatch(polygon, angle, pitch)
 

@@ -19,6 +19,9 @@ using Luxor
     sethue("red")
     P.hatch(circle_poly, -45, 2mm)
 
+    sethue("yellow")
+    P.hatch(circle_poly, -45, 2mm, 1mm)
+
     sethue("blue")
     P.hatch(star_poly, 45, 1mm)
 
